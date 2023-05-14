@@ -4,7 +4,6 @@ FROM ghcr.io/pyvista/pyvista:$BASE_IMAGE_TAG
 USER root
 COPY . /opt/pvxarray/
 WORKDIR /opt/pvxarray/
-RUN apt update && apt install libgl1-mesa-glx
 RUN pip install -r requirements.txt
 RUN pip install .
 
